@@ -1,15 +1,17 @@
 !! Transparency (0-1):
-st.alpha: 0.92
+st.alpha: 0.93
 
 !! Set a default font and font size as below:
 st.font: mono-18;
-! st.termname: st-256color
-! st.borderpx: 2
+!st.termname: st-256color
 
+!! st.borderpx: 7
 !! Set the background, foreground and cursor colors as below:
-*.background: #282828
+
+!! *.background: #282828
+*.background: #454545
 *.foreground: orange
-*.cursorColor:  black
+*.cursorColor:  pink
 
 /* !! gruvbox: */
 /* *.color0: #1d2021 */
@@ -87,22 +89,22 @@ st.font: mono-18;
 /* *.color15:      #f8f8f8 */
 
 /* !! solarized */
-/* *.color0:	#073642 */
-/* *.color1:	#dc322f */
-/* *.color2:	#859900 */
-/* *.color3:	#b58900 */
-/* *.color4:	#268bd2 */
-/* *.color5:	#d33682 */
-/* *.color6:	#2aa198 */
-/* *.color7:	#eee8d5 */
-/* *.color9:	#cb4b16 */
-/* *.color8:	#fdf6e3 */
-/* *.color10:	#586e75 */
-/* *.color11:	#657b83 */
-/* *.color12:	#839496 */
-/* *.color13:	#6c71c4 */
-/* *.color14:	#93a1a1 */
-/* *.color15:	#fdf6e3 */
+ *.color0:	#073642
+ *.color1:	#dc322f
+ *.color2:	#859900
+ *.color3:	#b58900
+ *.color4:	#268bd2
+ *.color5:	#d33682
+ *.color6:	#2aa198
+ *.color7:	#eee8d5
+ *.color9:	#cb4b16
+ *.color8:	#fdf6e3
+ *.color10:	#586e75
+ *.color11:	#657b83
+ *.color12:	#839496
+ *.color13:	#6c71c4
+ *.color14:	#93a1a1
+ *.color15:	#fdf6e3
 
 /* !! xterm */
 /* *.color0:   #000000 */
