@@ -8,11 +8,11 @@
 # export TERMINAL="st"
 
 # Windows color #
-client.focused              #282c34     #222222     #e06c75     #abb2bf
-client.focused_inactive     #282c34     #222222     #5c6370     #abb2bf
-client.unfocused            #282c34     #282c34     #5c6370     #abb2bf
-client.urgent               #be5046     #be5046     #282c34     #abb2bf
-client.background           #282c34
+client.focused              #d77a0f     #d77a0f     #d77a0f     #d77a0f
+client.focused_inactive     #d77a0f     #d77a0f     #d77a0f     #d77a0f
+client.unfocused            #d77a0f     #d77a0f     #d77a0f     #d77a0f
+client.urgent               #d77a0f     #d77a0f     #d77a0f     #d77a0f
+client.background           #d77a0f
 hide_edge_borders true
 default_border  normal 4
 default_floating_border pixel 4
