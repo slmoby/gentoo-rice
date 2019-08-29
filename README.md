@@ -8,4 +8,4 @@ Most of this repository files from [here](https://github.com/LukeSmithxyz/voidri
 
 - [English Version](https://larbs.xyz/larbs_readme.pdf)
 
-- Chinese Version (In translation)
+

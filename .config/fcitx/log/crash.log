@@ -1,0 +1,14 @@
+=========================
+FCITX 4.2.9.5 -- Get Signal No.: 11
+Date: try "date -d @1567083153" if you are using GNU date ***
+ProcessID: 18373
+fcitx(+0x191f)[0x55560f1c191f]
+/lib64/libc.so.6(+0x390d0)[0x7ff5edff20d0]
+/usr/lib64/libdbus-1.so.3(dbus_watch_get_enabled+0x0)[0x7ff5ed7f9ca0]
+/usr/lib64/fcitx/fcitx-dbus.so(+0x27f6)[0x7ff5ee2177f6]
+/usr/lib64/fcitx/fcitx-dbus.so(+0x29e1)[0x7ff5ee2179e1]
+/usr/lib64/libfcitx-core.so.0(+0xa3ba)[0x7ff5ee1e33ba]
+/usr/lib64/libfcitx-core.so.0(FcitxInstanceRun+0x57)[0x7ff5ee1e3b77]
+fcitx(+0x12bc)[0x55560f1c12bc]
+/lib64/libc.so.6(__libc_start_main+0xeb)[0x7ff5edfdce5b]
+fcitx(+0x133a)[0x55560f1c133a]

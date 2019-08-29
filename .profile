@@ -3,12 +3,12 @@
 
 # Adds `~/.local/bin/` and all subdirectories to $PATH
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
-export PATH="$PATH:/opt/texlive/2019/bin/x86_64-linux"
-export EDITOR="nvim"
+#export PATH="$PATH:/usr/local/texlive/2019/bin/x86_64-linux"
+export EDITOR="vim"
 export TERMINAL="st"
-export BROWSER="firefox"
+export BROWSER="google-chrome-stable"
 export READER="zathura"
-export FILE="vifm"
+export FILE="ranger"
 export BIB="$HOME/Documents/LaTeX/uni.bib"
 export REFER="$HOME/Documents/referbib"
 export SUDO_ASKPASS="$HOME/.local/bin/tools/dmenupass"

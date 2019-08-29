@@ -1,16 +1,19 @@
 !! Transparency (0-1):
-st.alpha: 0.93
+st.alpha: 0.8
 
 !! Set a default font and font size as below:
-st.font: mono-18;
+!! st.font: ;
+st.font:  Monaco-14;
 !st.termname: st-256color
 
 !! st.borderpx: 7
 !! Set the background, foreground and cursor colors as below:
 
-!! *.background: #282828
-*.background: #454545
+*.background: #282828
+!! *.background: #454545
+!! *.foreground:
 *.foreground: orange
+
 *.cursorColor:  pink
 
 /* !! gruvbox: */
