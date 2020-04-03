@@ -53,7 +53,7 @@ super + shift + BackSpace
 super + shift + Escape
 	prompt 'Leave Dwm?' 'killall dwm'
 super + x
-	ifinstalled slock && ( slock & xset dpms force off ; mpc pause ; pauseallmpv ; sudo pm-suspend)
+	prompt 'lock screen?' 'lock'
 XF86Launch1
 	xset dpms force off
 XF86TouchpadToggle
@@ -81,7 +81,7 @@ super + shift + p
 	mpc pause; pauseallmpv
 # Changes to next/previous tracks
 super + {comma,period}
-	mpc {prev,next}
+	mpc {prev,next};refbar
 # Restart track
 super + shift + less
 	mpc seek 0%
@@ -145,15 +145,15 @@ XF86MonBrightnessUp
 # Function keys
 super + shift + F1
 # Show readme
-super + F1
-	 groff -mom $HOME/.local/share/larbs/readme.mom -Tpdf | zathura -
+#super + F1
+#	 groff -mom $HOME/.local/share/larbs/readme.mom -Tpdf | zathura -
 
 # Change display
 super + F3
 	displayselect
 # Hibernate
 super + F4
-	prompt 'Hibernate computer?' 'sudo -A zzz'
+	prompt 'Hibernate computer?' 'sudo pm-hibernate'
 super + F5
 	sudo sv restart wpa_supplicant
 # Start torrent daemon/open interface
@@ -168,5 +168,5 @@ super + F8
 # Mount a USB drive or Android device
 super + {F9,F10}
 	{dmenumount,dmenuumount}
-super + F12
-	$TERMINAL -e wpa_cli
+#super + F12
+#	$TERMINAL -e wpa_cli

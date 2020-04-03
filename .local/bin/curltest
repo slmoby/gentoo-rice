@@ -1,0 +1,4 @@
+#!/bin/bash
+
+curl  --connect-timeout 3 -m 5 www.google.com > /dev/null 2>/dev/null
+echo $? > ~/.local/share/curl.log

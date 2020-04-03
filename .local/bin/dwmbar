@@ -1,17 +1,12 @@
-#!/usr/bin/env sh
-
+#!/bin/bash
 # This script sets the statusbar with the xsetroot command at the end. Have it
 # started by ~/.xinitrc or ~/.xprofile.
 
-# Handle SIGTRAP signals sent by refbar to update the status bar immediately.
 trap 'update' 5
-
 # Set the deliminter character.
 delim="|"
 
-# testweather checks to see if the most recent forecast is up to date.  If it
-# isn't, it downloads a new weather forecast, then signals to update the
-# statusbar. Gets weather report from wttr.in.
+
 testweather() { \
 	[ "$(stat -c %y "$HOME/.local/share/weatherreport" 2>/dev/null | cut -d' ' -f1)" != "$(date '+%Y-%m-%d')" ] &&
 		ping -q -c 1 1.1.1.1 >/dev/null &&
@@ -20,9 +15,6 @@ testweather() { \
 		refbar
 		}
 
-# Here is the (big) function that outputs the appearance of the statusbar. It
-# can really be broken down into many submodules which I've commented and
-# explained.
 status() { \
 
 	# Get current mpd track filename or artist - title if possible.
@@ -39,17 +31,25 @@ status() { \
 
 	# Get the volume of ALSA's master volume output.  Show an icon if or
 	# not muted.
-	amixer get Master | grep -o "[0-9]*%\|\[on\]\|\[off\]" | sed "s/\[on\]//;s/\[off\]//"
+	amixer get Master | grep Left|grep -o "[0-9]*%\|\[on\]\|\[off\]" | sed "s/\[on\]//;s/\[off\]//"
 
 	echo "$delim"
 
 	# Temp
-	acpi -t |awk '{print $4}' && echo "degrees C"
+	echo "cpu `acpi -t |sed -n "2, 1p" |awk '{print $4}'`℃"
 	echo "$delim"
 	# Wifi quality percentage and  icon if ethernet is connected.
 	grep "^\s*w" /proc/net/wireless | awk '{ print "", int($3 * 100 / 70) "%" }'
 	sed "s/down//;s/up//" /sys/class/net/e*/operstate
 
+	echo "$delim"
+	if [ "`ifconfig |grep tun0 |awk '{print $2}' | grep -o UP`" = "UP" ];then
+	    echo -e '🔗'
+	else
+	    echo -e '💔'
+	fi
+	echo "$delim"
+	fly
 	echo "$delim"
 	# Will show all batteries with approximate icon for remaining power.
 	for x in /sys/class/power_supply/BAT?/capacity;

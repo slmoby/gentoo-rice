@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ "`cat ~/.local/share/curl.log`" = "0" ]; then
+    echo -e "𝓕𝓻𝓮𝓮𝓭𝓸𝓶"
+else
+    echo -e "𝓻𝓮𝓼𝓽𝓻𝓲𝓬𝓽"
+fi

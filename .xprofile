@@ -4,13 +4,11 @@ export XIM=fcitx
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
-xrdb .Xdefaults
-setbg &		# Set the background
-sxhkd &	# Bind keys
-dwmbar &
-xset r rate 300 50 &	# Speed xrate up
-unclutter &		# Remove mouse when idle
-xcompmgr &		# xcompmgr for transparency
-dunst &			# dunst for notifications
+
 fcitx &
-#notify-send "Welcome to CARBS on Gentoo with dwm" "Press super+F1 for the help menu." # LARBSWELCOME
+xcompmgr &
+setbg &
+remaps &
+sxhkd &
+dunsh &
+dwmbar &

@@ -1,3 +1,11 @@
+#
+# Calcurse keys configuration file
+#
+# In this file the keybindings used by Calcurse are defined.
+# It is generated automatically by Calcurse and is maintained
+# via the key configuration menu of the interactive user
+# interface. It should not be edited directly.
+
 generic-cancel  ESC
 generic-select  SPC
 generic-credits  @
@@ -19,7 +27,7 @@ generic-add-todo  ^T
 generic-prev-day  T ^H
 generic-next-day  t ^L
 generic-prev-week  W ^K
-generic-next-week  w ^J
+generic-next-week  w
 generic-prev-month  M
 generic-next-month  m
 generic-prev-year  Y
@@ -37,7 +45,7 @@ end-of-week  $
 add-item  a A
 del-item  d D
 edit-item  e E
-view-item  v V
+view-item  v V RET
 pipe-item  |
 flag-item  !
 repeat  r

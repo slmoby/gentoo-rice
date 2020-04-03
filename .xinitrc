@@ -1,5 +1,5 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 [ -f "$HOME/.xprofile" ] && . ~/.xprofile
 
-exec i3
+exec dwm
